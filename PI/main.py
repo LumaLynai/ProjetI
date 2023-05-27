@@ -13,7 +13,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 
-with open ("C:\\Users\\PI\\style.css") as f:
+with open ("PI/style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
