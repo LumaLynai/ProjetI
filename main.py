@@ -244,8 +244,8 @@ if opcao != 'NAN':
     
     #Calculo do MACD
     st.markdown("<h2 style='text-align:center;font-size:34px; color:#60b4ff; margin-top:7rem;'>MACD</h2>", unsafe_allow_html=True)
-    st.markdown("Moving Average Convergence-Divergence (MACD) utilizado para analisar tendências de alta e baixa e auxiliando\
-        a identificação de quebra de tendências, indicando períodos de venda e compra. ")
+    st.markdown("Moving Average Convergence-Divergence (MACD) utilizado para rastrear tendências, auxiliando\
+        na tomada de decisão, indicando períodos de venda e compra. ")
    
     
     df_MACD = tabela.head(120)
@@ -290,7 +290,7 @@ if opcao != 'NAN':
 
     # Calculo de Bollinger 
     st.markdown("<h2 style='text-align:center;font-size:34px; color:#60b4ff; margin-top:7rem;'>Bandas de Bollinger</h2>", unsafe_allow_html=True)
-    st.markdown("Bandas de Bollinger  auxiliam na  identificação de pontos de reversão e tendências, como a volatilidade do mercado.")
+    st.markdown("Bandas de Bollinger permitem identificar possíveis pontos de reversão e volatilidade de valor.")
     
 
     df_BB = df_MACD.copy()
@@ -315,7 +315,7 @@ if opcao != 'NAN':
 
     # Calculo Media Movel Exponencial
     st.markdown("<h2 style='text-align:center;font-size:34px; color:#60b4ff; margin-top:7rem;'>MME</h2>", unsafe_allow_html=True)
-    st.markdown("Média Móvel Exponencial (MME) auxilia a observar de forma mais clara a tendência do mercado.")
+    st.markdown("Média Móvel Exponencial (MME) Auxilia na análise das tendências de mercado.")
     
     ME = st.selectbox('Intervalo ', ['7, 21 e 42 dias', '31, 61, 121 dias', '100, 150 e 300 dias'])
 
