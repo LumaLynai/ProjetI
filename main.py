@@ -343,8 +343,8 @@ if opcao != 'NAN':
         fig = go.Figure(data=[graf_E])
         fig.update_layout(yaxis_title='R$')
         fig.add_trace(ME7)
-        fig.add_trace(ME42)
         fig.add_trace(ME21)
+        fig.add_trace(ME42)
         st.plotly_chart(fig)
     elif ME == '31, 61, 121 dias':
         media['MME31'] = tabela['Fechamento'].ewm(span=31).mean()
