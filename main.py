@@ -317,7 +317,7 @@ if opcao != 'NAN':
     st.markdown("<h2 style='text-align:center;font-size:34px; color:#60b4ff; margin-top:7rem;'>MME</h2>", unsafe_allow_html=True)
     st.markdown("Média Móvel Exponencial (MME) Auxilia na análise das tendências de mercado.")
     
-    ME = st.selectbox('Intervalo ', ['7, 21 e 42 dias', '31, 61, 121 dias', '100, 150 e 300 dias'])
+    ME = st.selectbox('Intervalo ', ['7, 21 e 42 dias', '31, 61 e 121 dias', '100, 150 e 300 dias'])
 
     
     media = tabela.head(300)
