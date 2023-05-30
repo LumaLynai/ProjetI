@@ -336,10 +336,10 @@ if opcao != 'NAN':
                 close=media['Fechamento'],increasing_line_color= '#6AFFFF', decreasing_line_color= '#A7A7A7')
         ME7 = go.Scatter(x=media['Data'], y=media['MME7'], mode='lines',
                      line_color='#FF53FF', name='Media Movel Exponencial 7 dias')
-        ME42 = go.Scatter(x=media['Data'], y=media['MME42'], mode='lines',
-                      line_color='#8EB5E1', name='Media Movel Exponencial 42 dias')
-        ME21 = go.Scatter(x=media['Data'], y=media['MME21'], mode='lines',
-                      line_color='#fdf149', name='Media Movel Exponencial 21 dias')
+        ME21 = go.Scatter(x=media['Data'], y=media['MME42'], mode='lines',
+                      line_color='#8EB5E1', name='Media Movel Exponencial 21 dias')
+        ME42 = go.Scatter(x=media['Data'], y=media['MME21'], mode='lines',
+                      line_color='#fdf149', name='Media Movel Exponencial 42 dias')
         fig = go.Figure(data=[graf_E])
         fig.update_layout(yaxis_title='R$')
         fig.add_trace(ME7)
