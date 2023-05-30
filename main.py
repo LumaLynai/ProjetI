@@ -317,12 +317,12 @@ if opcao != 'NAN':
     st.markdown("<h2 style='text-align:center;font-size:34px; color:#60b4ff; margin-top:7rem;'>MME</h2>", unsafe_allow_html=True)
     st.markdown("Média Móvel Exponencial (MME) Auxilia na análise das tendências de mercado.")
     
-    ME = st.selectbox('Intervalo ', ['7, 21 e 42 dias', '31, 61 e 121 dias', '100, 150 e 300 dias'])
+    ME = st.selectbox('Intervalo ', ['7, 21, 42 dias', '31, 61, 121 dias', '100, 150, 300 dias'])
 
     
-    media = tabela.head(300)
+    media = tabela.head(360)
 
-    if ME == '7, 21 e 42 dias':
+    if ME == '7, 21, 42 dias':
         media['MME7'] = tabela['Fechamento'].ewm(span=(7), adjust=True,).mean()
         media['MME7'] = media['MME7'].apply(format)
 
@@ -346,6 +346,7 @@ if opcao != 'NAN':
         fig.add_trace(ME21)
         fig.add_trace(ME42)
         st.plotly_chart(fig)
+        
     elif ME == '31, 61, 121 dias':
         media['MME31'] = tabela['Fechamento'].ewm(span=31).mean()
         media['MME31'] = media['MME31'].apply(format)
