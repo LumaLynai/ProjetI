@@ -199,7 +199,7 @@ if opcao != 'NAN':
     
     url=requests.get(link())
     df = pd.read_csv(StringIO(url.text))
-    df['timestamp'] = pd.to_datetime(df['timestamp'], format='%Y-%m-%d')
+#df['timestamp'] = pd.to_datetime(df['timestamp'], format='%Y-%m-%d')
     df1 = df.copy()
     df1.drop(['dividend_amount','split_coefficient'],axis=1,inplace=True)
     tabela = df1.copy()
