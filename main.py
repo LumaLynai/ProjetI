@@ -199,8 +199,8 @@ if opcao != 'NAN':
     
     url=requests.get(link())
     df = pd.read_csv(StringIO(url.text))
-#df['timestamp'] = pd.to_datetime(df['timestamp'], format='%Y-%m-%d')
     df1 = df.copy()
+    df1['timestamp'] = pd.to_datetime(df['timestamp'], format='%Y-%m-%d')
     df1.drop(['dividend_amount','split_coefficient'],axis=1,inplace=True)
     tabela = df1.copy()
     tabela.rename(columns={'timestamp':'Data','open':'Abertura','high':'Maxima','low':'Minimo','close':'Fechamento','adjusted_close':'Fechamento Ajustado'},inplace=True)
