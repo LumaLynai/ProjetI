@@ -187,7 +187,7 @@ if opcao != 'NAN':
     st.sidebar.write(" Ticker: ",ticker)
     def link():
         https = 'https://www.alphavantage.co/query?'
-        funcao = "function=TIME_SERIES_DAILY_ADJUSTED&symbol="
+        funcao = "function=TIME_SERIES_DAILY&symbol="
         em = ticker
         local = ".SAO"
         chave = "&apikey="
