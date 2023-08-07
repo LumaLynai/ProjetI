@@ -403,7 +403,7 @@ if opcao != 'NAN':
                 
                 df3 = tabela.copy()
                 df3 = df3.set_index(pd.DatetimeIndex(df3['Data'].values))
-                df3.drop(['Data', 'Abertura', 'Maxima','Minimo', 'volume','Fechamento Ajustado'],axis=1,inplace=True)
+                df3.drop(['Data', 'Abertura', 'Maxima','Minimo', 'volume'],axis=1,inplace=True)
 
                 qtd_linha = len(df3)
                 qtd_treino = round(0.7 * qtd_linha)
