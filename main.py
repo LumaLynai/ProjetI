@@ -223,7 +223,7 @@ if opcao != 'NAN':
     df_tabela = tabela.copy() 
     
     df_tabela['Data'] = df_tabela['Data'].dt.strftime('%d/%m/%Y')
-    df_tabela[['Abertura','Maxima','Fechamento' ,'Minimo','Fechamento Ajustado']]=df_tabela[['Abertura','Maxima', 'Fechamento','Minimo','Fechamento Ajustado']].applymap(cifra)
+    df_tabela[['Abertura','Maxima','Minimo','Fechamento']]=df_tabela[['Abertura','Maxima','Minimo','Fechamento']].applymap(cifra)
     
     st.markdown("<h6 style='text-align:center;font-size:20px;margin: 0em 3em 0em 0em;'>HISTORICO</h6>", unsafe_allow_html=True)
     st.dataframe(df_tabela.style\
